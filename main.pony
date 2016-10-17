@@ -4,7 +4,6 @@ actor Main
   new create(env: Env) =>
     _env = env
     let hello = Hello(_env, "Hello World!")
-
     
 actor Hello
   let _env: Env
@@ -19,7 +18,6 @@ actor Hello
   be cancel()
   =>
     _env.out.print("Received cancel. Shutting down...")
-    
     
 actor Greeter 
   let _env: Env
